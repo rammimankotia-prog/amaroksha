@@ -261,3 +261,32 @@ body, html {
     gap: 2rem;
   }
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  z-index: 3;
+  font-family: var(--secondary-font);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(245, 245, 245, 0.7);
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+.footer a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px var(--gold);
+}
