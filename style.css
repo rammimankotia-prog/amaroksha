@@ -105,14 +105,34 @@ body, html {
 
 .title {
   font-family: var(--primary-font);
-  font-size: 5vw;
+  font-size: 6vw;
   font-weight: 700;
-  letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  animation: fadeInUp 1.5s ease-out forwards;
-  animation-delay: 0.5s;
+  
+  /* Start hidden */
   opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  letter-spacing: 0px;
+
+  /* Golden gradient for the text */
+  background: linear-gradient(
+    to right,
+    #ffffff 20%,
+    var(--gold) 40%,
+    var(--gold) 60%,
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Play two animations: reveal and shine */
+  animation: 
+    revealTitle 2.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s forwards,
+    shineText 5s linear 1.5s infinite;
 }
 
 .subtitle {
@@ -201,9 +221,33 @@ body, html {
   100% { width: 100px; }
 }
 
+@keyframes revealTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    letter-spacing: 0px;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    letter-spacing: 6px;
+    filter: blur(0);
+  }
+}
+
+@keyframes shineText {
+  0% {
+    background-position: -100% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
 @media (max-width: 768px) {
   .title {
-    font-size: 8vw;
+    font-size: 10vw;
   }
   .subtitle {
     font-size: 3vw;
