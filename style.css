@@ -129,10 +129,10 @@ body, html {
   /* Golden gradient for the text */
   background: linear-gradient(
     to right,
-    #ffffff 20%,
-    var(--gold) 40%,
-    var(--gold) 60%,
-    #ffffff 80%
+    #c5a02f 20%,
+    #ffdf73 40%,
+    #ffdf73 60%,
+    #c5a02f 80%
   );
   background-size: 200% auto;
   color: #000;
