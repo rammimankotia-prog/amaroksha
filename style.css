@@ -142,9 +142,22 @@ body, html {
   letter-spacing: 8px;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   animation: fadeInUp 1.5s ease-out forwards;
   animation-delay: 0.7s;
+  opacity: 0;
+}
+
+.sub-location {
+  font-family: var(--secondary-font);
+  font-size: 1vw;
+  font-weight: 300;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  animation: fadeInUp 1.5s ease-out forwards;
+  animation-delay: 0.9s;
   opacity: 0;
 }
 
